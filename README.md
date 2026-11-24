@@ -1,12 +1,19 @@
-# CS 236 Project – Phase 3
+# CS 236 Project – Phase 3 | Thi Thi Khine - Scott Gonzalez Barrios
+
+## Data
+
+Download necessary data here (don't rename; follow structure graph below)
+[Google Drive](https://drive.google.com/drive/folders/15dPN5VgYPjqAy_zcGnw1g4kPC8ouKXe9?usp=drive_link)
 
 ## Requirements
+
 Python 3.12 <=
 Java 11 <=
 Docker
 PostgreSQL
 
 ## Python Virtual Environment
+
 If you forgot how to use venv just follow these steps
 
 To create:
@@ -36,7 +43,7 @@ project/
 ├── schema.sql
 ├── README.md
 ├── load_db.py (to create PostgreSQL)
-├── .env
+├── .env (shared privately)
 ├── venv/ (optional?)
 ├── requirements.txt
 └── data/
