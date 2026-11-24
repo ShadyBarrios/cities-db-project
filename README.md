@@ -47,7 +47,8 @@ project/
 ├── .gitignore
 ├── schema.sql
 ├── README.md
-├── load_db.py (to create PostgreSQL)
+├── build-db.sh (to init db using docker/postgresql)
+├── load_db.py (to populate db)
 ├── .env (shared privately)
 ├── venv/ (optional?)
 ├── requirements.txt
