@@ -8,8 +8,11 @@ Download necessary data here (don't rename; follow structure graph below)
 ## Requirements
 
 Python 3.12 <=
+
 Java 11 <=
+
 Docker
+
 PostgreSQL
 
 ## Python Virtual Environment
