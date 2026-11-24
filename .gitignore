@@ -1,5 +1,12 @@
+# secret
 notes.txt
 .env
+
+# virtual environment
 venv/
+
+# datasets
 data/
+
+# npm and firebase stuff
 node_modules/
