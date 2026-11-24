@@ -1,4 +1,6 @@
-# CS 236 Project – Phase 3 | Thi Thi Khine - Scott Gonzalez Barrios
+# CS 236 Project – Phase 3 
+
+## Created By: Thi Thi Khine & Scott Gonzalez Barrios
 
 ## Data
 
