@@ -5,7 +5,7 @@ Scott Gonzalez Barrios - sgonz266
 load_db.py - CS236 Phase 2, section 2.2: load the three processed datasets into PostgreSQL
 with PySpark (JDBC) and verify the result.
 
-Inputs   processed/nyc_clean.parquet, processed/la_clean.parquet, processed/unified.parquet
+Inputs   data/parquets/nyc-clean.parquet, data/parquets/la-clean.parquet, processed/unified.parquet
 Tables   nyc_requests, la_requests, unified_requests
 
 Connection settings come from environment variable: PG_HOST, PG_PORT, PG_DB, PG_USER, PG_PASSWORD.
@@ -23,11 +23,11 @@ SCHEMA_SQL = os.path.join(BASE, "project/schema.sql")
 
 load_dotenv()
 
-PG_HOST = os.environ["PG_HOST"]
-PG_PORT = os.environ["PG_PORT"]
-PG_DB = os.environ["PG_DB"]
-PG_USER = os.environ["PG_USER"]
-PG_PASSWORD = os.environ["PG_PASSWORD"]
+PG_HOST = os.environ["POSTGRES_HOST"]
+PG_PORT = os.environ["POSTGRES_PORT"]
+PG_DB = os.environ["POSTGRES_DB"]
+PG_USER = os.environ["POSTGRES_USER"]
+PG_PASSWORD = os.environ["POSTGRES_PASSWORD"]
 
 # reWriteBatchedInserts: the driver sends multi-row INSERTs, which loads much faster.
 JDBC_URL = f"jdbc:postgresql://{PG_HOST}:{PG_PORT}/{PG_DB}?reWriteBatchedInserts=true"
@@ -36,8 +36,8 @@ JDBC_PROPS = {"user": PG_USER, "password": PG_PASSWORD, "driver": "org.postgresq
 
 # dataset name -> (table, primary-key column)
 DATASETS = {
-    "nyc_clean": ("nyc_requests", "unique_key"),
-    "la_clean": ("la_requests", "srnumber"),
+    "nyc-clean": ("nyc_requests", "unique_key"),
+    "la-clean": ("la_requests", "srnumber"),
     "unified": ("unified_requests", "request_id"),
 }
 

@@ -60,3 +60,18 @@ project/
         ├── la-clean.parquet
         └── unified.parquet
 ```
+
+## Initiating PostgresSQL DB with Docker
+
+Assuming docker is installed and active:
+
+Build with
+```bash
+chmod +x build-db.sh
+./build-db.sh
+```
+
+Then, populate with load_db.py
+```bash
+python load_db.py
+```
